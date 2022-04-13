@@ -1,0 +1,15 @@
+version: "3.8"
+
+# networks:
+#   default:
+#     external: false
+
+
+services:
+  ganache:
+    network_mode: "host"
+    image: trufflesuite/ganache-cli:latest
+    # ports:
+    #   - '8545:8545'
+    command: ganache-cli -s go
+    # basket cruel rich echo auto bubble lens average sand radar throw supply

@@ -1,0 +1,5 @@
+bin/
+.vscode/
+ev3-eth
+deploy
+query
