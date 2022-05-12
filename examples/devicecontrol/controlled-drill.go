@@ -3,8 +3,8 @@ package main
 import (
 	"ev3-eth/chain"
 	"ev3-eth/examples/devicecontrol/contract"
+	"ev3-eth/examples/devicecontrol/robot"
 	"ev3-eth/platform"
-	"ev3-eth/robot"
 
 	"flag"
 	"log"
@@ -51,12 +51,12 @@ func main() {
 		}
 	}
 
-	metricCh := make(chan int, 10)
+	// metricCh := make(chan int, 10)
 
 	drill.AttachListener(robot.Start, checkReadyState)
 	go drill.Start()
 	// go drill.CollectMetric(metricCh, stop)
-	go monitorMetric(metricCh, stop, id, ctx, controller)
+	// go monitorMetric(metricCh, stop, id, ctx, controller)
 	<-stop
 }
 
