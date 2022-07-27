@@ -1,0 +1,2 @@
+RpcEndpoint = "http://localhost:8545"
+Secret = ""
